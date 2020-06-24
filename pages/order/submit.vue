@@ -124,11 +124,11 @@ export default {
     },
     buySecKillGoods(params) {
       createSecKillOrder(params).then(res => {
-        let status = this.$resultCode.getStatus(res.code)
-        this.$message({
-          message: res.message,
-          type: status.type
-        })
+       // let status = this.$resultCode.getStatus(res.code)
+        // this.$message({
+        //   message: res.message,
+        //   type: status.type
+        // })
         setTimeout(_ => {
           this.$router.push({ path: '/order/list' })
         }, 1500)
